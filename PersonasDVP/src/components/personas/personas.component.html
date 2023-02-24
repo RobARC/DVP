@@ -1,0 +1,43 @@
+<div class="container">
+    <form [formGroup]="checkoutForm" class="form-register" (ngSubmit)="onSubmit()" method="post">
+  
+      <h2 class="form-register-heading">Registrar Persona</h2>
+  
+      <label for="nombres" class="sr-only">Nombres</label>
+      <input id="nombres" type="text" formControlName="nombres"  class="form-control" 
+      placeholder="Nombres" required>
+
+      <label for="apellidos" class="sr-only">Apellidos</label>
+      <input id="apellidos" type="text" formControlName="apellidos"  class="form-control" 
+      placeholder="apellidos" required>
+
+      <label for="numeroIdentificacion" class="sr-only">Numero de Indentificiación</label>
+      <input id="numeroIdentificacion" type="text" formControlName="numeroIdentificacion"  class="form-control" 
+      placeholder="Numero de Indentificiación" required>
+
+      <label for="Email" class="sr-only">Email address</label>
+      <input id="Email" type="email" formControlName="email"   class="form-control" placeholder="Email address"
+        required>
+
+     <label for="tipoIdentificacion" class="sr-only">Tipo Identificacion</label>
+     <select id="tipoIdentificacion" class="form-control tipoIdentificacion"  formControlName="tipoIdentificacion" required>
+         <option *ngFor="let id of tiposId" [value]="id">{{id}}</option>
+    </select>
+    
+    <label for="Password" class="sr-only">Password</label>
+    <input id="Password" type="password" name="password"   class="form-control" formControlName="password" placeholder="Password" required>
+      <div class="form-group">
+        <div class="col-md-10 col-md-offset-2">
+            <span class="btn-personas">
+                <button class="btn btn-primary" type="submit" [disabled]="!checkoutForm.valid">
+                    Salvar
+                </button>
+                &nbsp;
+                <button class="btn btn-default" type="button" [routerLink]='["/home"]'>
+                    Cancelar
+                </button>
+            </span>
+        </div>
+    </div>
+    </form>
+  </div>
