@@ -1,11 +1,27 @@
 <div class="container">
     <h2>Bienvenidos</h2>
     <br />
-    <div *ngIf="apiList">
-        
-        <ul>
-            <li *ngFor="let item of apiList" > Login: {{item.id}}</li>
-        </ul> 
-    </div>
+        <table class="table" >
+            <thead>
+                    <th>Login</th>
+                    <th>Id</th>
+                    <th>Node_Id</th>
+                    <th>Avatar_url</th>
+                    <th>Html_Url</th> 
+            </thead>
+            <tbody>
+               <!--Revisar porque no se llenan los datos--> 
+                <tr *ngFor="let item of data2 ">
+                    <td>{{item.login}}</td>
+                    <td>{{item.id}}</td>
+                    <td>{{item.node_id}}</td>
+                    <td>{{item.avatar_url}}</td>
+                    <td>{{item.html_url}}</td>
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+ </div>
     
        
