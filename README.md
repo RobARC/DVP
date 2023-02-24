@@ -74,3 +74,7 @@ From the CLI write ng serve</p>
 ### Consuming a external API
 <image src="./images/image9.png">
 <br>
+
+### Data API at Frontend
+<image src="./images/image10.png">
+<br>
